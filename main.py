@@ -49,9 +49,7 @@ def pdf_vecDB(file_path: str) -> None:
     faiss_db.save_local('vectorDB')
 
 if __name__ == '__main__':
-    # gr.ChatInterface(
-    #     fn=get_response, 
-    #     type="messages"
-    # ).launch()
-    # pdf_vecDB('/Users/ton_kkrongyuth/AIS Internship/datasource/AIS_annual_report.pdf')
-    print(rag_prompt.invoke({'question':'', 'context':''}))
+    gr.ChatInterface(
+        fn=get_response, 
+        type="messages"
+    ).launch()
